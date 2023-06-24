@@ -7,7 +7,7 @@ import css from './App.module.css';
 
 export const App = () => {
   const [contacts, setContacts] = useState(
-    JSON.parse(localStorage.getItem('state')) || []
+    () => JSON.parse(localStorage.getItem('state')) || []
   );
   const [filter, setfilter] = useState('');
 
